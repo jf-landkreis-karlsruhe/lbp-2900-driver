@@ -1,0 +1,27 @@
+%!PS-Adobe-3.0
+%%Pages: 2
+%%Page: 1 1
+/Helvetica-Bold findfont 34 scalefont setfont
+60 760 moveto (capt-lbp Testseite) show
+/Helvetica findfont 13 scalefont setfont
+60 735 moveto (Canon LBP2900 - freier Linux CAPT-Treiber) show
+60 717 moveto (Rahmen 20pt vom Rand, Graukeil, Linien, Text) show
+1.5 setlinewidth
+20 20 moveto 575 20 lineto 575 822 lineto 20 822 lineto closepath stroke
+% gray wedge
+0 1 9 { /i exch def i 10 div setgray 60 i 48 mul add 600 44 80 rectfill } for
+0 setgray
+60 600 480 80 rectstroke
+% fan of lines
+0.4 setlinewidth
+0 5 90 { gsave 300 330 translate rotate 0 0 moveto 220 0 lineto stroke grestore } for
+/Courier findfont 9 scalefont setfont
+0 1 14 { /i exch def 60 300 i 12 mul sub moveto (0123456789 ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz) show } for
+showpage
+%%Page: 2 2
+/Helvetica-Bold findfont 60 scalefont setfont
+100 500 moveto (Seite 2) show
+0.75 setgray 50 50 495 300 rectfill
+0 setgray
+showpage
+%%EOF

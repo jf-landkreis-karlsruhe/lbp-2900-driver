@@ -1,0 +1,13 @@
+# build output
+/capt
+*.o
+
+# test print logs and personal files
+debug.txt
+*.log
+ausdruck.jpg
+
+# test artifacts
+*.ras
+*.pbm
+*.pbm.lost

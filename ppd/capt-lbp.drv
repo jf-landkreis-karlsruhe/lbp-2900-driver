@@ -1,0 +1,48 @@
+// PPD source for the capt-lbp driver. Regenerate with: make ppd
+#include <font.defs>
+#include <media.defs>
+
+Manufacturer "Canon"
+Version 1.0
+Copyright "GPL-3.0-or-later"
+ColorModel "Gray/Grayscale" k chunky 0
+// Raster goes unmodified to the "capt" backend, which talks CAPT to the printer.
+Filter application/vnd.cups-raster 0 -
+ManualCopies yes
+
+{
+	Font *
+	ModelName "LBP2900"
+	Attribute "1284DeviceID" "" "MFG:Canon;MDL:LBP2900;CMD:CAPT;"
+	Attribute "Product" "" "(Canon LBP2900)"
+	PCFileName "CNLB2900.PPD"
+	FileName "Canon-LBP2900-capt.ppd"
+
+	*Resolution k 1 70 592 0 "600dpi/600 DPI"
+
+	Option "captTonerSave/Toner Save" Boolean AnySetup 10
+	*Choice False/Off "<</cupsInteger0 0>>setpagedevice"
+	Choice True/On "<</cupsInteger0 1>>setpagedevice"
+
+	*MediaType 0 "Plain/Plain Paper"
+	MediaType 2 "PlainL/Plain Paper (light)"
+	MediaType 1 "Heavy/Heavy Paper"
+	MediaType 3 "HeavyH/Heavy Paper H"
+	MediaType 4 "Transparency/Transparency"
+
+	HWMargins 14.17 14.17 14.17 14.17
+	VariablePaperSize yes
+	MinSize 76.2mm 127mm
+	MaxSize 215.9mm 355.6mm
+	*MediaSize A4
+	MediaSize A5
+	MediaSize B5
+	MediaSize Letter
+	MediaSize Legal
+	MediaSize Executive
+	HWMargins 28.35 28.35 28.35 28.35
+	MediaSize Env10
+	MediaSize EnvDL
+	MediaSize EnvC5
+	MediaSize EnvMonarch
+}
